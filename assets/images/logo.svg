@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Green circle background -->
+  <circle cx="100" cy="100" r="100" fill="#1a331a"/>
+  <!-- Thin circle outline -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="white" stroke-width="2.5"/>
+  <!-- NR serif monogram -->
+  <text x="100" y="130"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="88"
+    font-weight="400"
+    fill="white"
+    text-anchor="middle"
+    letter-spacing="-4">NR</text>
+</svg>

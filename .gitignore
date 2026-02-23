@@ -1,0 +1,36 @@
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Pastas de IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos temporários
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+*.log
+
+# Node modules (caso adicione build tools no futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build (caso compile assets no futuro)
+dist/
+build/
+
+# Configurações locais
+.env
+.env.local
+
+# Cache
+.cache/
+*.cache

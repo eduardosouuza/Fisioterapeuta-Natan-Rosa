@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description"
+    content="Dr. Natan Rosa - Fisioterapeuta especializado em atendimento domiciliar em Guarulhos. Reabilitação ortopédica, geriátrica e pós-operatória no conforto da sua casa." />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/logo.svg" />
+  <title>NR Fisioterapia - Atendimento Domiciliar em Guarulhos</title>
+  <!-- Preload hero image for faster LCP -->
+  <link rel="preload" as="image" href="./assets/images/4909E3EE-2D4F-46AA-AA8E-990318EC5100 - Natan Rosa.JPG" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;600;700&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1B3A28",        // Verde escuro do logo
+            "secondary": "#2E5840",      // Verde médio
+            "accent": "#E8DDCA",         // Bege claro do logo
+            "background-light": "#F7F3EB", // Off-white bege
+            "background-dark": "#0D1F17",  // Verde muito escuro
+            "luxury-teal": "#1B3A28",    // Mesmo tom verde principal
+            "surface": "#EFE9DC",        // Bege muito claro
+            "muted-blue": "#3D5A4A"      // Verde acinzentado
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "sans": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "none": "0",
+            "sm": "0.125rem",
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      body { @apply font-sans antialiased bg-background-light text-slate-900; }
+      h1, h2, h3, h4 { @apply font-display tracking-tight font-semibold; }
+    }
+    @layer utilities {
+      .grid-pattern {
+        background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0);
+        background-size: 40px 40px;
+      }
+      .data-card {
+        @apply bg-white border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-300;
+      }
+      .technical-label {
+        @apply text-[10px] font-bold uppercase tracking-[0.15em] text-muted-blue flex items-center gap-2;
+      }
+    }
+  </style>
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Custom Styles                                              -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body class="dark:bg-background-dark dark:text-slate-100 overflow-x-hidden">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Mobile Overlay                                             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <div id="mobile-overlay"
+    class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-all duration-400">
+  </div>
+
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div id="nav-wrapper" class="max-w-[1100px] mx-auto px-4 pt-5 transition-all duration-500">
+      <div id="nav-inner" class="nav-glass rounded-2xl px-5 py-3.5 flex justify-between items-center">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group shrink-0">
+          <div class="relative">
+            <div
+              class="absolute -inset-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500">
+            </div>
+            <div
+              class="relative flex items-center justify-center h-12 w-12 rounded-full bg-[#1B3A28] transition-transform duration-300 group-hover:scale-110 overflow-hidden">
+              <img src="./assets/images/NR_logo_transparente_hd.png" alt="Logo NR Fisioterapeuta"
+                class="h-16 w-16 object-cover" />
+            </div>
+          </div>
+          <span class="text-lg font-display font-bold text-slate-900 dark:text-white tracking-tight">NR <span
+              class="text-primary font-light">FISIOTERAPIA</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a class="nav-link-item text-[11px] font-semibold text-slate-500 hover:text-primary tracking-[0.12em] uppercase px-4 py-2.5 rounded-lg"
+            href="#" data-section="inicio">Início</a>
+          <span class="text-slate-300 text-[8px] select-none">●</span>
+          <a class="nav-link-item text-[11px] font-semibold text-slate-500 hover:text-primary tracking-[0.12em] uppercase px-4 py-2.5 rounded-lg"
+            href="#especialidades" data-section="especialidades">Especialidades</a>
+          <span class="text-slate-300 text-[8px] select-none">●</span>
+          <a class="nav-link-item text-[11px] font-semibold text-slate-500 hover:text-primary tracking-[0.12em] uppercase px-4 py-2.5 rounded-lg"
+            href="#sobre" data-section="sobre">Sobre</a>
+          <span class="text-slate-300 text-[8px] select-none">●</span>
+          <a class="nav-link-item text-[11px] font-semibold text-slate-500 hover:text-primary tracking-[0.12em] uppercase px-4 py-2.5 rounded-lg"
+            href="#diferenciais" data-section="diferenciais">Diferenciais</a>
+          <span class="text-slate-300 text-[8px] select-none">●</span>
+          <a class="nav-link-item text-[11px] font-semibold text-slate-500 hover:text-primary tracking-[0.12em] uppercase px-4 py-2.5 rounded-lg"
+            href="#contato" data-section="contato">Contato</a>
+
+          <!-- Divider -->
+          <div class="w-px h-6 bg-slate-200/80 mx-3"></div>
+
+          <!-- CTA Button -->
+          <a href="https://wa.me/5511974333997?text=Olá,%20Dr.%20Natan.%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia."
+            target="_blank"
+            class="cta-pulse group relative bg-gradient-to-r from-primary to-secondary text-white text-[10px] font-bold py-2.5 pl-4 pr-5 rounded-full transition-all duration-300 uppercase tracking-wider inline-flex items-center gap-2.5 hover:scale-105 active:scale-95">
+            <span
+              class="absolute inset-0 bg-gradient-to-r from-secondary to-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+            <span class="relative z-10 flex items-center justify-center size-6 bg-white/20 rounded-full">
+              <svg class="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </span>
+            <span class="relative z-10">Agendar</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden">
+          <button id="mobile-menu-btn"
+            class="relative size-11 rounded-xl flex flex-col items-center justify-center gap-[5px] text-slate-600 dark:text-slate-300 hover:text-primary transition-all duration-300 active:scale-90"
+            aria-label="Abrir menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden">
+      <div class="max-w-[1100px] mx-auto px-4 pt-3">
+        <div class="nav-glass rounded-2xl p-5 flex flex-col gap-1">
+
+          <a class="mobile-item flex items-center gap-4 text-[11px] font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-all tracking-[0.1em] uppercase py-3.5 px-4 rounded-xl hover:bg-primary/5 active:bg-primary/10"
+            href="#" onclick="closeMobileMenu()">
+            <span class="flex items-center justify-center size-9 rounded-lg bg-primary/8 text-primary">
+              <span class="material-symbols-outlined text-lg">home</span>
+            </span>
+            <span class="flex flex-col">
+              <span>Início</span>
+              <span class="text-[9px] font-normal text-slate-400 normal-case tracking-normal mt-0.5">Página
+                inicial</span>
+            </span>
+          </a>
+
+          <a class="mobile-item flex items-center gap-4 text-[11px] font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-all tracking-[0.1em] uppercase py-3.5 px-4 rounded-xl hover:bg-primary/5 active:bg-primary/10"
+            href="#especialidades" onclick="closeMobileMenu()">
+            <span class="flex items-center justify-center size-9 rounded-lg bg-primary/8 text-primary">
+              <span class="material-symbols-outlined text-lg">medical_services</span>
+            </span>
+            <span class="flex flex-col">
+              <span>Especialidades</span>
+              <span class="text-[9px] font-normal text-slate-400 normal-case tracking-normal mt-0.5">Tratamentos
+                oferecidos</span>
+            </span>
+          </a>
+
+          <a class="mobile-item flex items-center gap-4 text-[11px] font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-all tracking-[0.1em] uppercase py-3.5 px-4 rounded-xl hover:bg-primary/5 active:bg-primary/10"
+            href="#sobre" onclick="closeMobileMenu()">
+            <span class="flex items-center justify-center size-9 rounded-lg bg-primary/8 text-primary">
+              <span class="material-symbols-outlined text-lg">person</span>
+            </span>
+            <span class="flex flex-col">
+              <span>Sobre</span>
+              <span class="text-[9px] font-normal text-slate-400 normal-case tracking-normal mt-0.5">Conheça o
+                profissional</span>
+            </span>
+          </a>
+
+          <a class="mobile-item flex items-center gap-4 text-[11px] font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-all tracking-[0.1em] uppercase py-3.5 px-4 rounded-xl hover:bg-primary/5 active:bg-primary/10"
+            href="#diferenciais" onclick="closeMobileMenu()">
+            <span class="flex items-center justify-center size-9 rounded-lg bg-primary/8 text-primary">
+              <span class="material-symbols-outlined text-lg">verified</span>
+            </span>
+            <span class="flex flex-col">
+              <span>Diferenciais</span>
+              <span class="text-[9px] font-normal text-slate-400 normal-case tracking-normal mt-0.5">Por que nos
+                escolher</span>
+            </span>
+          </a>
+
+          <a class="mobile-item flex items-center gap-4 text-[11px] font-semibold text-slate-700 dark:text-slate-200 hover:text-primary transition-all tracking-[0.1em] uppercase py-3.5 px-4 rounded-xl hover:bg-primary/5 active:bg-primary/10"
+            href="#contato" onclick="closeMobileMenu()">
+            <span class="flex items-center justify-center size-9 rounded-lg bg-primary/8 text-primary">
+              <span class="material-symbols-outlined text-lg">call</span>
+            </span>
+            <span class="flex flex-col">
+              <span>Contato</span>
+              <span class="text-[9px] font-normal text-slate-400 normal-case tracking-normal mt-0.5">Agende sua
+                avaliação</span>
+            </span>
+          </a>
+
+          <div class="mobile-item border-t border-slate-200/60 dark:border-slate-700/60 mt-3 pt-4">
+            <a href="https://wa.me/5511974333997?text=Olá,%20Dr.%20Natan.%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia."
+              target="_blank"
+              class="group w-full bg-gradient-to-r from-primary to-secondary text-white text-[11px] font-bold py-4 rounded-xl transition-all uppercase tracking-widest text-center flex items-center justify-center gap-3 shadow-lg shadow-primary/20 active:scale-[0.98] hover:shadow-xl">
+              <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+              Agendar Avaliação
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Hero Section                                               -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+    <!-- Background -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-background-dark dark:via-slate-900 dark:to-background-dark">
+    </div>
+    <!-- Decorative blobs -->
+    <div class="absolute top-32 -left-32 w-[500px] h-[500px] bg-primary/[0.04] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[400px] bg-accent/[0.05] rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+      <!-- Left Content -->
+      <div class="space-y-8">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center gap-2.5 bg-primary/[0.06] border border-primary/10 px-4 py-2 rounded-full animate-fade-in">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+          </span>
+          <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-primary">Agenda Disponivel</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="animate-fade-in" style="animation-delay: 0.1s;">
+          <span
+            class="block text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold text-slate-900 dark:text-white leading-[1.1] tracking-tight">
+            Fisioterapia
+          </span>
+          <span
+            class="block text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-bold leading-[1.1] tracking-tight mt-1 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Domiciliar
+          </span>
+          <span
+            class="block text-xl sm:text-2xl lg:text-3xl font-medium text-slate-500 dark:text-slate-400 mt-3 tracking-tight">
+            em Guarulhos
+          </span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 leading-relaxed max-w-lg animate-fade-in"
+          style="animation-delay: 0.2s;">
+          Reabilitação ortopédica e geriátrica <span class="text-slate-800 dark:text-slate-200 font-medium">no conforto
+            da sua casa</span>.
+          Atendimento particular focado em promover resultados para você.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-3 animate-fade-in" style="animation-delay: 0.3s;">
+          <a href="https://wa.me/5511974333997?text=Olá,%20Dr.%20Natan.%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia."
+            target="_blank"
+            class="group bg-gradient-to-r from-primary to-secondary text-white text-sm font-bold h-14 px-8 rounded-2xl transition-all duration-300 flex items-center gap-3 uppercase tracking-wider shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.03] active:scale-[0.98]">
+            Agendar Avaliação
+            <span
+              class="material-symbols-outlined text-lg group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+          </a>
+          <a href="#sobre"
+            class="group text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-primary/40 text-sm font-semibold h-14 px-8 rounded-2xl transition-all duration-300 uppercase tracking-wider flex items-center hover:bg-primary/[0.03] active:scale-[0.98]">
+            Conheça o Profissional
+          </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="flex items-center gap-8 pt-6 animate-fade-in" style="animation-delay: 0.4s;">
+          <div>
+            <div class="text-2xl font-bold text-slate-900 dark:text-white">4+</div>
+            <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mt-0.5">Anos de exp.</div>
+          </div>
+          <div class="w-px h-10 bg-slate-200 dark:bg-slate-700"></div>
+          <div>
+            <div class="flex text-amber-400 gap-0.5">
+              <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mt-1">Avaliação 5.0</div>
+          </div>
+          <div class="w-px h-10 bg-slate-200 dark:bg-slate-700"></div>
+          <div class="flex flex-col items-center gap-1">
+            <span class="material-symbols-outlined text-2xl text-primary"
+              style="font-variation-settings: 'FILL' 1;">home_health</span>
+            <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Em Domicílio</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="relative flex items-center justify-center animate-fade-in" style="animation-delay: 0.3s;">
+        <div class="relative w-full max-w-sm lg:max-w-none mx-auto">
+          <!-- Glow behind photo -->
+          <div
+            class="absolute -inset-6 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 rounded-[2rem] blur-2xl">
+          </div>
+
+          <!-- Photo card -->
+          <div
+            class="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/10 ring-1 ring-white/60 dark:ring-slate-700/40">
+            <img alt="Dr. Natan Rosa - Fisioterapeuta Profissional"
+              class="w-full aspect-[4/5] lg:aspect-[3/4] object-cover object-center"
+              src="./assets/images/4909E3EE-2D4F-46AA-AA8E-990318EC5100 - Natan Rosa.JPG" />
+            <!-- Gradient overlay at bottom -->
+            <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <!-- Name label on photo -->
+            <div class="absolute bottom-5 left-5 right-5">
+              <div class="text-white text-sm font-bold tracking-wide">Dr. Natan Rosa</div>
+              <div class="text-white/70 text-xs font-medium mt-0.5">CREFITO-3: 379346-F</div>
+            </div>
+          </div>
+
+          <!-- Floating badge (hidden on small screens) -->
+          <div
+            class="hidden sm:block absolute -bottom-4 -right-4 bg-white dark:bg-slate-900 px-5 py-3.5 rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 dark:border-slate-800">
+            <div class="flex items-center gap-3">
+              <div class="flex items-center justify-center size-10 rounded-xl bg-primary/10">
+                <span class="material-symbols-outlined text-primary text-xl">home_health</span>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900 dark:text-white leading-none">Atendimento</div>
+                <div class="text-[10px] font-semibold text-primary uppercase tracking-wider mt-1">Domiciliar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Especialidades Section                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="py-28 relative overflow-hidden" id="especialidades">
+    <!-- Background layers -->
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-white via-slate-50/80 to-white dark:from-background-dark dark:via-slate-900/90 dark:to-background-dark">
+    </div>
+    <div class="absolute inset-0 opacity-[0.35]"
+      style="background-image: radial-gradient(circle at 1.5px 1.5px, rgba(27,58,40,0.07) 1px, transparent 0); background-size: 40px 40px;">
+    </div>
+    <!-- Decorative blobs -->
+    <div
+      class="absolute top-16 -left-32 w-[500px] h-[500px] bg-primary/[0.05] rounded-full blur-[100px] pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-16 -right-32 w-[400px] h-[400px] bg-accent/[0.06] rounded-full blur-[90px] pointer-events-none">
+    </div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-secondary/[0.04] rounded-full blur-[120px] pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <!-- Header -->
+      <div class="text-center mb-20">
+        <div
+          class="inline-flex items-center gap-2.5 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm text-primary px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8 border border-primary/15 shadow-sm">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary/60 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          Especialidades Técnicas
+        </div>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+          Tratamentos <span
+            class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Especializados</span>
+        </h2>
+        <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
+          Abordagem individualizada com foco em autonomia, recuperação e qualidade de vida.
+        </p>
+      </div>
+
+      <!-- 4-Column Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+        <!-- Card 1: Fisioterapia Geriátrica -->
+        <div
+          class="group relative bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-7 lg:p-8 rounded-[1.75rem] border border-white/80 dark:border-slate-700/50 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_20px_50px_-12px_rgba(27,58,40,0.12)] hover:-translate-y-2 overflow-hidden">
+          <!-- Shimmer overlay -->
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+            style="background: linear-gradient(135deg, transparent 30%, rgba(27,58,40,0.03) 50%, transparent 70%);">
+          </div>
+          <!-- Corner accent -->
+          <div
+            class="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-primary/[0.06] to-transparent rounded-bl-[3rem] transition-all duration-500 group-hover:w-36 group-hover:h-36">
+          </div>
+
+          <div class="relative">
+            <!-- Icon -->
+            <div class="relative mb-6">
+              <div
+                class="absolute -inset-2.5 bg-gradient-to-br from-primary/15 to-accent/10 rounded-xl blur-lg opacity-60 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500">
+              </div>
+              <div
+                class="relative size-14 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                <span class="material-symbols-outlined text-white text-[22px]"
+                  style="font-variation-settings: 'FILL' 1;">elderly</span>
+              </div>
+            </div>
+            <!-- Content -->
+            <h3
+              class="text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-2.5 group-hover:text-primary transition-colors duration-300">
+              Fisioterapia Geriátrica</h3>
+            <p class="text-[13px] text-slate-500 dark:text-slate-400 leading-relaxed mb-5">Foco na autonomia,
+              Atendimento para idosos com Alzheimer, Parkinson, pós-AVC, Artrose e prevenção de doenças..</p>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">fitness_center</span> Fortalecimento
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">balance</span> +Equilíbrio
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">fitness_center</span> +Força
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">self_improvement</span> +Autonomia
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">emergency</span> -Risco de Quedas
+              </span>
+            </div>
+
+            <!-- Footer -->
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100/80 dark:border-slate-700/40">
+              <span class="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Especialidade 01</span>
+              <div
+                class="size-8 rounded-xl bg-primary/[0.07] flex items-center justify-center group-hover:bg-primary group-hover:shadow-md group-hover:shadow-primary/30 transition-all duration-500">
+                <span
+                  class="material-symbols-outlined text-primary group-hover:text-white text-[13px] group-hover:translate-x-0.5 transition-all duration-300">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Reabilitação Ortopédica (FEATURED) -->
+        <div
+          class="group relative bg-gradient-to-br from-primary via-[#1e4430] to-secondary p-7 lg:p-8 rounded-[1.75rem] text-white transition-all duration-500 hover:shadow-[0_25px_60px_-12px_rgba(27,58,40,0.35)] hover:-translate-y-2 overflow-hidden">
+          <!-- Background pattern -->
+          <div class="absolute inset-0 opacity-[0.06]"
+            style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.5) 1px, transparent 0); background-size: 24px 24px;">
+          </div>
+          <!-- Light sweep on hover -->
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none"
+            style="background: linear-gradient(135deg, transparent 20%, rgba(255,255,255,0.06) 45%, transparent 65%);">
+          </div>
+          <!-- Glow -->
+          <div
+            class="absolute -top-16 -right-16 w-40 h-40 bg-accent/20 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700">
+          </div>
+          <div
+            class="absolute -bottom-12 -left-12 w-36 h-36 bg-secondary/25 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700">
+          </div>
+
+          <div class="relative">
+            <!-- Badge -->
+            <div
+              class="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-[0.12em] text-accent border border-white/10 mb-6">
+              <span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              Mais Procurado
+            </div>
+            <!-- Icon -->
+            <div class="relative mb-6">
+              <div class="absolute -inset-3 bg-white/10 rounded-2xl blur-xl"></div>
+              <div
+                class="relative size-14 bg-white/15 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 shadow-xl group-hover:scale-110 group-hover:bg-white/25 transition-all duration-500">
+                <span class="material-symbols-outlined text-accent text-[22px]"
+                  style="font-variation-settings: 'FILL' 1;">accessibility_new</span>
+              </div>
+            </div>
+            <!-- Content -->
+            <h3 class="text-lg lg:text-xl font-bold mb-2.5 leading-tight">Reabilitação Ortopédica</h3>
+            <p class="text-white/70 leading-relaxed mb-5 text-[13px]">Tratamento de lesões musculares,
+              articulares, dores na coluna e lesões esportivas</p>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-accent/90 bg-white/10 px-2.5 py-1 rounded-full border border-white/[0.06]">
+                <span class="material-symbols-outlined text-[11px]">emergency</span> Tendinites
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-accent/90 bg-white/10 px-2.5 py-1 rounded-full border border-white/[0.06]">
+                <span class="material-symbols-outlined text-[11px]">healing</span> Bursites
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-accent/90 bg-white/10 px-2.5 py-1 rounded-full border border-white/[0.06]">
+                <span class="material-symbols-outlined text-[11px]">directions_run</span> Entorses
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-accent/90 bg-white/10 px-2.5 py-1 rounded-full border border-white/[0.06]">
+                <span class="material-symbols-outlined text-[11px]">sports_martial_arts</span> Hérnia de Disco
+              </span>
+            </div>
+            <!-- Footer -->
+            <div class="flex items-center justify-between pt-4 border-t border-white/15">
+              <span class="text-[9px] font-bold uppercase tracking-[0.15em] text-accent/70">Especialidade 02</span>
+              <a href="https://wa.me/5511974333997?text=Olá,%20Dr.%20Natan.%20Gostaria%20de%20saber%20mais%20sobre%20reabilitação%20ortopédica."
+                target="_blank"
+                class="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 backdrop-blur-sm px-3.5 py-2 rounded-xl text-[9px] font-bold uppercase tracking-wider text-white border border-white/10 transition-all duration-300 hover:scale-105 active:scale-95">
+                Saiba mais
+                <span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Pós-Operatório -->
+        <div
+          class="group relative bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-7 lg:p-8 rounded-[1.75rem] border border-white/80 dark:border-slate-700/50 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_20px_50px_-12px_rgba(27,58,40,0.12)] hover:-translate-y-2 overflow-hidden">
+          <!-- Shimmer overlay -->
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+            style="background: linear-gradient(135deg, transparent 30%, rgba(232,221,202,0.05) 50%, transparent 70%);">
+          </div>
+          <!-- Corner accent -->
+          <div
+            class="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-accent/[0.07] to-transparent rounded-bl-[3rem] transition-all duration-500 group-hover:w-36 group-hover:h-36">
+          </div>
+
+          <div class="relative">
+            <!-- Icon -->
+            <div class="relative mb-6">
+              <div
+                class="absolute -inset-2.5 bg-gradient-to-br from-accent/15 to-primary/10 rounded-xl blur-lg opacity-60 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500">
+              </div>
+              <div
+                class="relative size-14 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center shadow-lg shadow-accent/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                <span class="material-symbols-outlined text-white text-[22px]"
+                  style="font-variation-settings: 'FILL' 1;">healing</span>
+              </div>
+            </div>
+            <!-- Content -->
+            <h3
+              class="text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-2.5 group-hover:text-primary transition-colors duration-300">
+              Pós-Operatório</h3>
+            <p class="text-[13px] text-slate-500 dark:text-slate-400 leading-relaxed mb-5">Reabilitação pós cirúrgica,
+              orientações gerais, alívio da dor
+              e retomada das atividades do dia a dia.</p>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">speed</span> Recuperação
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">monitoring</span> Acompanhamento
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">personal_injury</span> Reabilitação
+              </span>
+            </div>
+            <!-- Footer -->
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100/80 dark:border-slate-700/40">
+              <span class="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Especialidade 03</span>
+              <div
+                class="size-8 rounded-xl bg-primary/[0.07] flex items-center justify-center group-hover:bg-primary group-hover:shadow-md group-hover:shadow-primary/30 transition-all duration-500">
+                <span
+                  class="material-symbols-outlined text-primary group-hover:text-white text-[13px] group-hover:translate-x-0.5 transition-all duration-300">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Atendimento Domiciliar -->
+        <div
+          class="group relative bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-7 lg:p-8 rounded-[1.75rem] border border-white/80 dark:border-slate-700/50 hover:border-primary/40 transition-all duration-500 hover:shadow-[0_20px_50px_-12px_rgba(27,58,40,0.12)] hover:-translate-y-2 overflow-hidden">
+          <!-- Shimmer overlay -->
+          <div
+            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+            style="background: linear-gradient(135deg, transparent 30%, rgba(46,88,64,0.04) 50%, transparent 70%);">
+          </div>
+          <!-- Corner accent -->
+          <div
+            class="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-secondary/[0.06] to-transparent rounded-bl-[3rem] transition-all duration-500 group-hover:w-36 group-hover:h-36">
+          </div>
+
+          <div class="relative">
+            <!-- Icon -->
+            <div class="relative mb-6">
+              <div
+                class="absolute -inset-2.5 bg-gradient-to-br from-secondary/15 to-primary/10 rounded-xl blur-lg opacity-60 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500">
+              </div>
+              <div
+                class="relative size-14 bg-gradient-to-br from-secondary to-primary rounded-2xl flex items-center justify-center shadow-lg shadow-secondary/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                <span class="material-symbols-outlined text-white text-[22px]"
+                  style="font-variation-settings: 'FILL' 1;">home_health</span>
+              </div>
+            </div>
+            <!-- Content -->
+            <h3
+              class="text-lg lg:text-xl font-bold text-slate-900 dark:text-white mb-2.5 group-hover:text-primary transition-colors duration-300">
+              Atendimento Domiciliar</h3>
+            <p class="text-[13px] text-slate-500 dark:text-slate-400 leading-relaxed mb-5">Liberação miofascial,
+              agulhamento nos pontos de dor,
+              botinha pneumática, massagem esportiva.</p>
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">location_on</span> Guarulhos
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">home</span> Conforto
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">self_improvement</span> Relaxamento Muscular
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">speed</span> Aceleração na Recuperação
+              </span>
+              <span
+                class="inline-flex items-center gap-1 text-[9px] font-semibold text-primary/80 bg-primary/[0.06] px-2.5 py-1 rounded-full">
+                <span class="material-symbols-outlined text-[11px]">sports_score</span> Alívio de Dor Pós-Treino
+              </span>
+            </div>
+            <!-- Footer -->
+            <div class="flex items-center justify-between pt-4 border-t border-slate-100/80 dark:border-slate-700/40">
+              <span class="text-[9px] font-bold uppercase tracking-[0.15em] text-slate-400">Especialidade 04</span>
+              <div
+                class="size-8 rounded-xl bg-primary/[0.07] flex items-center justify-center group-hover:bg-primary group-hover:shadow-md group-hover:shadow-primary/30 transition-all duration-500">
+                <span
+                  class="material-symbols-outlined text-primary group-hover:text-white text-[13px] group-hover:translate-x-0.5 transition-all duration-300">arrow_forward</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom CTA strip -->
+      <div class="mt-16 text-center">
+        <div
+          class="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white/60 dark:bg-slate-800/60 backdrop-blur-md px-8 py-5 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 shadow-lg">
+          <p class="text-sm text-slate-600 dark:text-slate-400 font-medium">Precisa de um tratamento específico?</p>
+          <a href="https://wa.me/5511974333997?text=Olá,%20Dr.%20Natan.%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia."
+            target="_blank"
+            class="group/cta inline-flex items-center gap-2.5 bg-gradient-to-r from-primary to-secondary text-white text-[10px] font-bold py-3 pl-5 pr-4 rounded-xl transition-all duration-300 uppercase tracking-wider hover:shadow-lg hover:shadow-primary/20 hover:scale-105 active:scale-95">
+            Fale Comigo
+            <span
+              class="material-symbols-outlined text-sm group-hover/cta:translate-x-0.5 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Sobre Section                                              -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="py-24 grid-pattern" id="sobre">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4 pt-12">
+            <img alt="Terapia" class="w-full rounded-2xl aspect-[3/4] object-cover shadow-lg border border-slate-200"
+              loading="lazy" src="./assets/images/IMG_8170 - Natan Rosa.JPG" />
+            <div class="bg-primary p-6 rounded-2xl text-white">
+              <span class="text-3xl font-bold font-display block mb-1">4+</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest opacity-70">Anos de experiência
+                clínica</span>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200">
+              <span class="material-symbols-outlined text-3xl text-primary block mb-2"
+                style="font-variation-settings: 'FILL' 1;">home_health</span>
+              <span class="text-xl font-bold font-display text-primary block mb-1">Domiciliar</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Em todo Guarulhos</span>
+            </div>
+            <img alt="Dr Natan Rosa"
+              class="w-full rounded-2xl aspect-[3/4] object-cover shadow-lg border border-slate-200" loading="lazy"
+              src="./assets/images/IMG_8164 - Natan Rosa.JPG" />
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div class="technical-label mb-6">Conheça o Profissional</div>
+          <h2 class="text-4xl lg:text-5xl text-slate-900 dark:text-white mb-8">Dr. Natan Rosa
+          </h2>
+          <p class="text-lg text-slate-600 dark:text-slate-400 italic mb-8">
+            "Com 4 anos de experiência clínica, sou Fisioterapeuta Pós-graduado em Ortopedia e Esportiva, com vasta
+            experiência em atendimento com idosos."
+          </p>
+          <p class="text-slate-500 dark:text-slate-400 mb-10 leading-relaxed text-sm">
+            Meu objetivo é levar qualidade de vida e autonomia para meus pacientes, oferecendo um tratamento baseado em
+            ciência, de acordo com suas necessidades, totalmente individualizado, sem a rotatividade das
+            clínicas convencionais.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+            <div class="p-4 bg-white border border-slate-200 rounded-xl flex items-center gap-4">
+              <span class="material-symbols-outlined text-primary">timer</span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Plano de tratamento
+                personalizado</span>
+            </div>
+            <div class="p-4 bg-white border border-slate-200 rounded-xl flex items-center gap-4">
+              <span class="material-symbols-outlined text-primary">home</span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Atendimento Domiciliar</span>
+            </div>
+            <div class="p-4 bg-white border border-slate-200 rounded-xl flex items-center gap-4 sm:col-span-2">
+              <span class="material-symbols-outlined text-primary">favorite</span>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-slate-700">Tratamento Humanizado</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-6 pt-8 border-t border-slate-200">
+            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">CREDENCIAL:</span>
+            <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">CREFITO-3: 379346-F</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Diferenciais Section                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-50 dark:bg-slate-900/50" id="diferenciais">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <div class="technical-label justify-center mb-4">Por que escolher?</div>
+        <h2 class="text-4xl lg:text-5xl text-slate-900 dark:text-white mb-6">Por que agendar seu atendimento?</h2>
+        <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+          Diferencial que faz a diferença no seu tratamento e recuperação
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="data-card p-10 rounded-2xl flex gap-6">
+          <div class="shrink-0">
+            <div class="size-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Pontualidade</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Respeito rigoroso ao seu horário. Sem atrasos, sem imprevistos.
+            </p>
+          </div>
+        </div>
+        <div class="data-card p-10 rounded-2xl flex gap-6">
+          <div class="shrink-0">
+            <div class="size-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Foco em Resultados</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Conduta terapêutica fundamentada em evidências científicas, com protocolos atualizados e realmente
+              eficazes.
+            </p>
+          </div>
+        </div>
+        <div class="data-card p-10 rounded-2xl flex gap-6">
+          <div class="shrink-0">
+            <div class="size-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Atenção Individual</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              O horário é totalmente dedicado a você, sem dividir atenção com outros pacientes.
+            </p>
+          </div>
+        </div>
+        <div class="data-card p-10 rounded-2xl flex gap-6">
+          <div class="shrink-0">
+            <div class="size-12 bg-primary/10 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-2xl">check_circle</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Comodidade</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Atendimento em todo o município de Guarulhos. Sem sair de casa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Contato Section                                            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="py-28 relative overflow-hidden" id="contato">
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0f2318] via-[#162e20] to-[#1B3A28]"></div>
+    <div class="absolute inset-0 opacity-[0.04]"
+      style="background-image: radial-gradient(circle at 1.5px 1.5px, rgba(255,255,255,0.4) 1px, transparent 0); background-size: 36px 36px;">
+    </div>
+    <!-- Decorative blobs -->
+    <div
+      class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/[0.08] rounded-full blur-[120px] pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/[0.1] rounded-full blur-[100px] pointer-events-none">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <div
+          class="inline-flex items-center gap-2.5 bg-white/[0.08] backdrop-blur-sm text-accent px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8 border border-white/[0.08]">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent/60 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+          </span>
+          Fale Conosco
+        </div>
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Agende sua <span
+            class="bg-gradient-to-r from-accent to-[#f0e6d3] bg-clip-text text-transparent">Avaliação</span>
+        </h2>
+        <p class="text-base sm:text-lg text-white/50 max-w-xl mx-auto leading-relaxed">
+          Atendimento domiciliar em toda Guarulhos-SP. Cuidado personalizado na sua casa.
+        </p>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+
+        <!-- Left: Info Cards (3 cols) -->
+        <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Card: Location -->
+          <div
+            class="group bg-white/[0.06] backdrop-blur-md p-7 rounded-2xl border border-white/[0.08] hover:border-accent/30 transition-all duration-500 hover:bg-white/[0.1]">
+            <div
+              class="size-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+              <span class="material-symbols-outlined text-accent text-2xl"
+                style="font-variation-settings: 'FILL' 1;">location_on</span>
+            </div>
+            <h3 class="text-[10px] font-bold uppercase tracking-[0.15em] text-white/40 mb-2">Localização</h3>
+            <p class="text-white font-semibold text-base mb-1">Guarulhos - SP</p>
+            <p class="text-white/50 text-sm">Atendimento domiciliar em todo o município</p>
+          </div>
+
+          <!-- Card: WhatsApp -->
+          <a href="https://wa.me/5511974333997?text=Olá,%20Dr.%20Natan.%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia."
+            target="_blank" rel="noopener noreferrer"
+            class="group bg-white/[0.06] backdrop-blur-md p-7 rounded-2xl border border-white/[0.08] hover:border-green-400/30 transition-all duration-500 hover:bg-white/[0.1] block">
+            <div
+              class="size-12 rounded-xl bg-green-500/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-6 h-6 fill-green-400" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>
+            </div>
+            <h3 class="text-[10px] font-bold uppercase tracking-[0.15em] text-white/40 mb-2">WhatsApp</h3>
+            <p class="text-white font-semibold text-base mb-1">(11) 97433-3997</p>
+            <p class="text-green-400/70 text-sm font-medium group-hover:text-green-400 transition-colors">Clique para
+              conversar →</p>
+          </a>
+
+          <!-- Card: Schedule -->
+          <div
+            class="group bg-white/[0.06] backdrop-blur-md p-7 rounded-2xl border border-white/[0.08] hover:border-accent/30 transition-all duration-500 hover:bg-white/[0.1]">
+            <div
+              class="size-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+              <span class="material-symbols-outlined text-accent text-2xl"
+                style="font-variation-settings: 'FILL' 1;">schedule</span>
+            </div>
+            <h3 class="text-[10px] font-bold uppercase tracking-[0.15em] text-white/40 mb-2">Horário</h3>
+            <p class="text-white font-semibold text-base mb-1">07:00 – 20:00</p>
+            <p class="text-white/50 text-sm">Segunda a Sexta</p>
+          </div>
+
+          <!-- Card: Method -->
+          <div
+            class="group bg-white/[0.06] backdrop-blur-md p-7 rounded-2xl border border-white/[0.08] hover:border-accent/30 transition-all duration-500 hover:bg-white/[0.1]">
+            <div
+              class="size-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+              <span class="material-symbols-outlined text-accent text-2xl"
+                style="font-variation-settings: 'FILL' 1;">verified</span>
+            </div>
+            <h3 class="text-[10px] font-bold uppercase tracking-[0.15em] text-white/40 mb-2">Atendimento</h3>
+            <p class="text-white font-semibold text-base mb-1">Particular</p>
+            <p class="text-white/50 text-sm">Atendimento exclusivo e personalizado</p>
+          </div>
+        </div>
+
+        <!-- Right: CTA Panel (2 cols) -->
+        <div class="lg:col-span-2">
+          <div
+            class="relative bg-white/[0.06] backdrop-blur-md p-10 rounded-[1.75rem] border border-white/[0.1] overflow-hidden">
+            <!-- Gradient glow -->
+            <div class="absolute -top-20 -right-20 w-48 h-48 bg-accent/15 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+              class="absolute -bottom-16 -left-16 w-40 h-40 bg-secondary/20 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <div class="relative text-center">
+              <!-- Avatar -->
+              <div
+                class="size-20 rounded-full bg-gradient-to-br from-accent/20 to-primary/30 mx-auto mb-6 flex items-center justify-center border-2 border-white/10">
+                <span class="material-symbols-outlined text-accent text-4xl"
+                  style="font-variation-settings: 'FILL' 1;">person</span>
+              </div>
+
+              <h3 class="text-2xl font-bold text-white mb-2">Dr. Natan Rosa</h3>
+              <p class="text-white/40 text-xs font-bold uppercase tracking-widest mb-6">CREFITO-3: 379346-F</p>
+
+              <p class="text-white/60 text-sm leading-relaxed mb-8">
+                Agende sua avaliação domiciliar pelo WhatsApp. Resposta rápida e atendimento personalizado.
+              </p>
+
+              <!-- CTA Button -->
+              <a href="https://wa.me/5511974333997?text=Olá,%20Dr.%20Natan.%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia."
+                target="_blank" rel="noopener noreferrer"
+                class="group/btn relative inline-flex w-full items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-400 hover:to-green-500 text-white font-bold h-14 rounded-2xl transition-all duration-300 uppercase tracking-widest text-xs cta-pulse hover:shadow-xl hover:shadow-green-500/20 hover:scale-[1.02] active:scale-95">
+                <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+                Agendar pelo WhatsApp
+              </a>
+
+              <!-- Social links -->
+              <div class="flex items-center justify-center gap-4 mt-8 pt-6 border-t border-white/[0.08]">
+                <a class="size-11 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-all duration-300 hover:scale-110"
+                  href="https://instagram.com/natanrosa_fisio" target="_blank" rel="noopener noreferrer">
+                  <svg class="w-[18px] h-[18px] fill-white/70" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.85-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="https://wa.me/5511974333997?text=Olá,%20Dr.%20Natan.%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20fisioterapia."
+                  target="_blank" rel="noopener noreferrer"
+                  class="size-11 rounded-xl bg-white/[0.06] border border-white/[0.08] flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-all duration-300 hover:scale-110">
+                  <svg class="w-[18px] h-[18px] fill-white/70" viewBox="0 0 24 24">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                  </svg>
+                </a>
+                <span class="text-[10px] text-white/30 font-bold uppercase tracking-wider ml-2">@natanrosa_fisio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Testimonials Section                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="py-24 bg-slate-50/50 dark:bg-slate-900/30" id="depoimentos">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <div
+          class="inline-flex items-center gap-2.5 bg-primary/[0.06] text-primary px-5 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+          Avaliações Reais
+        </div>
+        <h3 class="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">O que dizem nossos pacientes
+        </h3>
+        <div
+          class="inline-flex items-center gap-3 bg-white dark:bg-slate-800 px-5 py-3 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
+              fill="#4285F4" />
+            <path
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              fill="#34A853" />
+            <path
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              fill="#FBBC05" />
+            <path
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              fill="#EA4335" />
+          </svg>
+          <div class="flex items-center gap-1">
+            <span class="text-lg font-bold text-slate-900 dark:text-white">5.0</span>
+            <div class="flex">
+              <span class="material-symbols-outlined text-amber-400 text-base"
+                style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-base"
+                style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-base"
+                style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-base"
+                style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-amber-400 text-base"
+                style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+          </div>
+          <span class="text-xs text-slate-500 font-medium">no Google</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Review 1: Celia -->
+        <div
+          class="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200/80 dark:border-slate-700/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/[0.05] hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-5">
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+            "Natan é excelente fisioterapeuta, com muito profissionalismo e extrema atenção às necessidades do
+            paciente, sempre orientando e explicando todo o processo da fisioterapia, foi fundamental para minha
+            <strong class="text-slate-900 dark:text-white">recuperação completa de uma lesão no ombro</strong>. Um
+            profissional a se indicar sempre!"
+          </p>
+          <!-- Reply -->
+          <div class="bg-primary/[0.04] dark:bg-primary/[0.08] rounded-xl p-4 mb-6 border-l-2 border-primary/30">
+            <p class="text-[11px] text-primary/70 font-semibold uppercase tracking-wider mb-2">Resposta do Dr. Natan
+            </p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              "Que bom que consegui fazer um bom trabalho para recuperar o seu ombro! Explicar e orientar durante todo
+              o processo faz total diferença!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-5 border-t border-slate-100 dark:border-slate-700/50">
+            <div
+              class="size-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-sm">
+              C</div>
+            <div>
+              <p class="text-sm font-bold text-slate-900 dark:text-white">Celia Putini</p>
+              <p class="text-[11px] text-slate-400">4 meses atrás</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Valdir -->
+        <div
+          class="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200/80 dark:border-slate-700/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/[0.05] hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-5">
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+            "O profissional Natan Rosa é extremamente pontual, dedicado e atencioso. Ele vem atendendo o meu pai, que
+            <strong class="text-slate-900 dark:text-white">sofreu um AVC há 20 anos</strong>, com excelência e muito
+            profissionalismo. Demonstrou desde o início grande cuidado, paciência e dedicação."
+          </p>
+          <!-- Reply -->
+          <div class="bg-primary/[0.04] dark:bg-primary/[0.08] rounded-xl p-4 mb-6 border-l-2 border-primary/30">
+            <p class="text-[11px] text-primary/70 font-semibold uppercase tracking-wider mb-2">Resposta do Dr. Natan
+            </p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              "Fico feliz que o meu planejamento com o Sr Ivo tenha surtido tanto efeito na qualidade de vida dele. A
+              dedicação dele tem sido essencial também!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-5 border-t border-slate-100 dark:border-slate-700/50">
+            <div
+              class="size-10 rounded-full bg-gradient-to-br from-secondary to-primary flex items-center justify-center text-white font-bold text-sm">
+              V</div>
+            <div>
+              <p class="text-sm font-bold text-slate-900 dark:text-white">Valdir Ruggeri</p>
+              <p class="text-[11px] text-slate-400">4 meses atrás</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3: Felipe -->
+        <div
+          class="group bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200/80 dark:border-slate-700/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/[0.05] hover:-translate-y-1">
+          <div class="flex items-center gap-1 mb-5">
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="material-symbols-outlined text-amber-400 text-lg"
+              style="font-variation-settings: 'FILL' 1;">star</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+            "Atendimento muito bom! Excelente profissional. <strong class="text-slate-900 dark:text-white">Altamente
+              técnico e atualizado dos melhores métodos de fisioterapia atuais</strong>, além de um grande ser humano.
+            Indico a todos de olhos fechados. Sucesso sempre."
+          </p>
+          <!-- Reply -->
+          <div class="bg-primary/[0.04] dark:bg-primary/[0.08] rounded-xl p-4 mb-6 border-l-2 border-primary/30">
+            <p class="text-[11px] text-primary/70 font-semibold uppercase tracking-wider mb-2">Resposta do Dr. Natan
+            </p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+              "Olá, Felipe. Obrigado pelo reconhecimento, nosso tratamento para suas dores no joelho foi um sucesso, o
+              uso do Laser para analgesia combinado com os exercícios específicos de fortalecimento deram um ótimo
+              resultado!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-5 border-t border-slate-100 dark:border-slate-700/50 mt-auto">
+            <div
+              class="size-10 rounded-full bg-gradient-to-br from-accent to-secondary flex items-center justify-center text-white font-bold text-sm">
+              F</div>
+            <div>
+              <p class="text-sm font-bold text-slate-900 dark:text-white">Felipe Lopes</p>
+              <p class="text-[11px] text-slate-400">8 meses atrás</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- Footer                                                     -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <footer class="bg-white dark:bg-background-dark pt-20 pb-12 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center justify-center h-12 w-12 rounded-full bg-[#1B3A28] overflow-hidden">
+              <img src="./assets/images/NR_logo_transparente_hd.png" alt="Logo NR Fisioterapeuta"
+                class="h-16 w-16 object-cover" />
+            </div>
+            <span class="text-base font-display font-bold text-slate-900 dark:text-white uppercase tracking-tight">NR
+              Fisioterapeuta</span>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 max-w-sm mb-8 text-sm leading-relaxed">
+            Especialidade em fisioterapia geriátrica e ortopédica. Atendimento domiciliar em Guarulhos com foco em
+            autonomia e qualidade de vida.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-[10px] uppercase tracking-widest text-slate-900 dark:text-white mb-6">Navegação</h4>
+          <ul class="space-y-4">
+            <li><a class="text-slate-500 hover:text-primary transition-colors text-xs font-semibold tracking-widest"
+                href="#">INÍCIO</a></li>
+            <li><a class="text-slate-500 hover:text-primary transition-colors text-xs font-semibold tracking-widest"
+                href="#sobre">SOBRE</a></li>
+            <li><a class="text-slate-500 hover:text-primary transition-colors text-xs font-semibold tracking-widest"
+                href="#especialidades">TRATAMENTOS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-[10px] uppercase tracking-widest text-slate-900 dark:text-white mb-6">Legal</h4>
+          <ul class="space-y-4">
+            <li><a class="text-slate-500 hover:text-primary transition-colors text-xs font-semibold tracking-widest"
+                href="#">PRIVACIDADE</a></li>
+            <li><a class="text-slate-500 hover:text-primary transition-colors text-xs font-semibold tracking-widest"
+                href="#">TERMOS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-100 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-[10px] text-slate-400 dark:text-slate-500 mt-10">
+          © 2026 NR Fisioterapeuta - Dr. Natan Rosa. CREFITO-3: 379346-F
+        </p>
+        <p class="text-[10px] text-slate-400 flex items-center gap-1.5 font-medium tracking-wide">
+          Desenvolvido por <a href="https://portifolioeduardosouza.vercel.app/" target="_blank"
+            rel="noopener noreferrer" class="text-primary hover:text-secondary font-bold transition-colors">Eduardo
+            Souza</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- JavaScript                                                 -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
